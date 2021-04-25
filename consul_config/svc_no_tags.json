@@ -1,0 +1,7 @@
+{
+    "service": {
+        "name": "no_tags",
+        "tags": [],
+        "port": 8888
+    }
+}

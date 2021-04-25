@@ -1,0 +1,9 @@
+{
+    "service": {
+        "name": "with_tags",
+        "tags": [
+            "existing"
+        ],
+        "port": 4444
+    }
+}

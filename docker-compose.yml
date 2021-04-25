@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  consul:
+    image: "docker.io/library/consul:1.9.5"
+    volumes:
+      - ./consul_config/:/consul/config/
+    ports:
+      - "127.0.0.1:8500:8500"
+  prometheus:
+    image: "docker.io/prom/prometheus:v2.26.0"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "127.0.0.1:9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
